@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: aqua; color: black; font-size: 30px; text-align: center;">
+    <h1>Primeiro DOM</h1>
+    <p>Aqui Paragrafo</p>
+    <p>aqui paragrafo dois</p>
+    <div class="divClass" id="divId"  style="border-color: black; border-radius: 50px; background-color: rgb(26, 121, 121);">Clique em mim</div>
+    <script>
+        //document.write(document.URL)
+        var p1 = document.getElementsByTagName('p')[0]//seleciona a possição
+        var p2 = document.getElementsByTagName('p')[1]
+        p1.style.color = 'white'
+        p1.style.background = 'black'
+        //window.document.write('esta escrito assim: '+ p1.innerText)
+        document.write(p1.innerHTML)
+
+        d = window.document.getElementById('divId')
+        d.style.background = 'black'
+        d.style.color = 'white'
+        d.style.cursor = 'pointer'
+
+        e = window.document.querySelector('div.divClass')
+    </script>
+</body>
+</html>

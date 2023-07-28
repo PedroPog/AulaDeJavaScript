@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Horas</title>
+</head>
+<body id="body" style="font-size: 50px; text-align: center;">
+    <script>
+        var agora = new Date()
+        var hora = agora.getHours()
+        var minuto =  agora.getMinutes()
+        if(hora < 13){
+            document.write(`<strong>Bom dia!</strong><br> ${hora}:${minuto} Horas da manhã`)
+            bod = document.getElementById('body')
+            bod.style.background = "black"
+            bod.style.color = "white"
+        }else if(hora < 17){
+            document.write(`<strong>Bom Tarde!</strong><br> ${hora}:${minuto} Horas da tarde`)
+            bod.style.background = "white"
+            bod.style.color = "black"
+        }else{
+            document.write(`<strong>Bom Noite!</strong><br> ${hora}:${minuto} Horas da noite`)
+            bod.style.background = "blue"
+            bod.style.color = "black"
+        }
+    </script>
+</body>
+</html>

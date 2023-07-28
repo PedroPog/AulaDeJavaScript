@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <label>Ususario</label>
+        <input id="usuario" type="text">
+        <br>
+        <label>Senha</label>
+        <input id="senha" type="password">
+        <input type="button" value="Submit" onclick="botao()">
+
+        <script>
+        
+        function botao(){
+            usu1 = document.getElementById('usuario')
+            sen1 = document.getElementById('senha')
+            usu = usu1.value
+            sen = sen1.value
+            if(usu == 'pedro'){
+                if(sen != '123'){
+                    window.alert("Senha incorreta!")
+                }else{
+                window.alert("Login com sucesso!")
+                usu1.value = ""
+                sen1.value = ""
+                }
+            }else if(usu == ''){
+                window.alert("Porfavor prencecher todos os campos")
+            }
+            else{
+                window.alert("Usuario incorreta!")
+            }
+        }
+        
+    </script>
+    </body>
+</html>
