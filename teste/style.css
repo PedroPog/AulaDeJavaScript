@@ -13,9 +13,10 @@ header{
 }
 section{
     display: flex;
-    height: 76vh;
+    height: 69vh;
     padding: 2% 4%;
     flex-wrap: wrap;
+    justify-content: space-between;
 }
 .conteudo{
 
@@ -31,6 +32,11 @@ section{
 #logo{
     display: flex;
 }
+.a{
+    color: black;
+    display: flex;
+    text-decoration: none;
+}
 #menu-ul{
     display: flex;
     flex-wrap: wrap;
@@ -38,58 +44,61 @@ section{
     flex-direction: row;
     gap: 5em;
 }
-#menu-ul li{
+#menu-ul li , #menu-ul li a{
     list-style: none;
     font-size: 22px;
     font-weight: bold;
     cursor: pointer;
+    text-decoration: none;
+    color: black;
 }
-#menu-ul li:hover{
+#menu-ul li a:hover{
+    text-decoration: none;
     font-size: 25px;
     font-weight: bold;
     cursor: pointer;
     color: red;
+}
+#menu-ul li a:active{
+    color:white;
 }
 /*NAV*/
 
 /*NAV*/
 
 /* DEVICON*/
-.carousel{
-    width: 70%;
+.carrossel {
+    display: flex;
+    gap: 2em;
+    overflow: hidden;
     height: 100%;
+    width: 65%;
+}
+
+.container {
+    transition: transform 0.5s ease-in-out;
+    transform: translateX(0);
+    width: 100%;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
     align-content: center;
-    justify-content: center;
-}
-.conteudo-imagem{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    width: 17%;
     align-items: center;
+    justify-content: center;
+    gap: 2em;
+}
+
+.imagem {
+    object-fit: cover;
+    height: 16vh;
+    width: 8vw;
     filter: blur(4px);
-    transition-delay: 10ms;
+    transition: filter 0.3s ease-in-out;
+    text-align: center;
 }
-.conteudo-imagem:hover{
-    filter: blur(0);
-    transition-delay: 10ms;
-}
-.conteudo-imagem label{
-    font-size: 25px;
-}
-.imagem{
-    width: 20vh;
-}
-#imagem{
-    width: 300px;
-    height: 300px;
-    border-radius: 100%;
-    background-color: rgb(255 255 255 / 12%);
-    box-shadow: 1px 2px 7px 5px #0000006b;
+
+.imagem.highlight {
+    filter: blur(0px);
 }
 /* DEVICON*/
 /*FOOTER*/
